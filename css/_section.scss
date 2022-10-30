@@ -1,0 +1,70 @@
+.btn-carousel-projects span > i {
+	border-radius: 50%;
+	font-size: 4rem;
+	color: white;
+}
+
+.container-section {
+	position: relative;
+	margin-top: 10rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+
+	.btn-carousel-projects--rigth {
+		padding-left: 8rem;
+	}
+
+	.btn-carousel-projects--left {
+		padding-right: 8rem;
+	}
+
+	.section-card {
+		padding: 5rem 5rem;
+		max-width: 110rem;
+		margin: 4rem 0;
+		position: relative;
+		background-color: $background-general-card;
+		box-shadow: $box-shadow-general-card;
+		border-radius: 0.8rem;
+
+		.container-title {
+			display: flex;
+			margin-top: -8.4rem;
+			justify-content: flex-end;
+			margin-bottom: 2rem;
+
+			&__title {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 50%;
+				height: 9rem;
+				border-radius: 0.8rem;
+				color: $text-color-titles-inner-cards;
+				background: $background-cards-viollete;
+				box-shadow: $box-shadow-card-viollete;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.btn-carousel-projects span > i {
+		font-size: 3rem;
+	}
+
+	.container-section {
+		.btn-carousel-projects--rigth {
+			padding-left: 2rem;
+		}
+
+		.btn-carousel-projects--left {
+			padding-right: 2rem;
+		}
+
+		.section-card {
+			padding: 2.4rem 0;
+		}
+	}
+}

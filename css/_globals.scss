@@ -1,0 +1,111 @@
+$background: #1a2035;
+$linkedin-color: rgba(10, 102, 194, 1);
+$github-color: #ffffff;
+// $intagram-color:linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+$whatsapp-color: rgba(37, 211, 102, 1);
+$font: "Roboto", sans-serif;
+
+// Cards Settings
+
+$background-cards-blue: linear-gradient(60deg, #029eb1, #25b1c3);
+$box-shadow-card-blue: 0 4px 20px 0 rgb(0 0 0 / 14%),
+	0 7px 10px -5px rgb(0 188 212 / 40%);
+$background-cards-viollete: linear-gradient(60deg, #7b1fa2, #913f9e);
+$box-shadow-card-viollete: 0 4px 20px 0 rgb(0 0 0 / 14%),
+	0 7px 10px -5px rgb(156 39 176 / 40%);
+$box-shadow-card-viollete--hover: 0 14px 26px -12px rgb(145 63 158 / 42%),
+	0 4px 23px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(145 63 158 / 20%);
+//
+$background-cards-orange: linear-gradient(60deg, #f5700c, #ff9800);
+$box-shadow-card-orange: 0 4px 20px 0 rgb(0 0 0 / 14%),
+	0 7px 10px -5px rgb(255 152 0 / 40%), 0 7px 10px -5px rgb(156 39 176 / 40%);
+//
+$background-cards-green: linear-gradient(60deg, #288c6c, #4ea752);
+$box-shadow-card-green: 0 4px 20px 0 rgb(0 0 0 / 14%),
+	0 7px 10px -5px rgb(76 175 80 / 40%);
+//
+$background-cards-red: linear-gradient(60deg, #d22824, #da3a36);
+$box-shadow-card-red: 0 4px 20px 0 rgb(0 0 0 / 14%),
+	0 7px 10px -5px rgb(244 67 54 / 40%);
+//
+$text-color-titles-inner-cards: #fff;
+$text-color-paragraph-inner-cards: hsla(0, 0%, 100%, 0.8);
+
+// General settings
+$icons-color: #fff;
+$text-color: #8b92a9;
+$text-very-ligth: #606477;
+$font-paragraphs: 1.6rem;
+$font-titles: 3.6rem;
+$background-general-card: #202940;
+$box-shadow-general-card: 0 1px 4px 0 rgb(0 0 0 / 14%);
+$line-very-ligth-border: hsla(0, 0%, 71%, 0.1);
+
+* {
+	color: $text-color;
+	font-family: $font;
+}
+
+#canvasBackground {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+}
+
+body {
+	position: relative;
+
+	background-color: $background !important;
+
+	p {
+		font-size: $font-paragraphs;
+	}
+
+	.arrow-up {
+		z-index: 25;
+		color: $text-color;
+		border-radius: 1rem;
+		right: 3rem;
+		bottom: 3rem;
+		padding: 1.5rem;
+		background-color: $background-general-card;
+		text-decoration: none;
+		display: flex;
+		position: fixed;
+		font-size: 3.5rem;
+		box-shadow: $box-shadow-general-card;
+		transition: bottom 0.3s, color 0.3s, transform 1s;
+		// display: none;
+		transform: translate(100px);
+	}
+
+	.arrow-up:hover {
+		bottom: 3.8rem;
+		color: $icons-color;
+	}
+
+	.arrow-up i {
+		color: inherit;
+		background-color: transparent;
+	}
+}
+
+html {
+	font-size: 62.5% !important;
+	scroll-behavior: smooth;
+}
+
+//Scroll bar styles
+::-webkit-scrollbar {
+	background: rgba(107, 99, 99, 0.355);
+	width: 1rem;
+	border-radius: 1.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $text-color;
+	border-radius: 1.4rem;
+}

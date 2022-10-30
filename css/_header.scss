@@ -1,0 +1,208 @@
+.container-header {
+	margin-top: 6rem;
+}
+
+.row {
+	.container-canvas-text {
+		z-index: 10;
+	}
+
+	.card-header-a {
+		z-index: 10;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+
+		// <btn-CV>
+		&__button-cv {
+			&__btn:hover {
+				box-shadow: $box-shadow-card-viollete--hover;
+				color: white;
+				background-color: #9b43a9;
+				border-color: #692e72;
+			}
+
+			&__btn {
+				position: relative;
+				overflow: hidden;
+				display: inline-block;
+				color: $text-color-paragraph-inner-cards;
+				outline: 0;
+				border: none;
+				padding: 2rem 8rem;
+				background: $background-cards-viollete;
+				box-shadow: $box-shadow-card-viollete;
+				margin-bottom: 2.85rem;
+				border-radius: 1rem;
+				font-size: $font-paragraphs;
+				text-decoration: none;
+				transition: color 0.4s, background 0.4s, box-shadow 0.4s;
+
+				@keyframes blink {
+					0% {
+						height: 0px;
+						width: 0px;
+						opacity: 0.5;
+					}
+
+					100% {
+						height: 400px;
+						width: 400px;
+						opacity: 0;
+					}
+				}
+			}
+		}
+
+		// <btn-CV/>
+
+		&__photo:hover .card-header-a__photo__content {
+			transform: rotateY(180deg);
+		}
+
+		&__photo:hover {
+			animation-play-state: paused;
+		}
+
+		&__photo {
+			max-width: 40.7rem;
+			max-height: 43.9rem;
+			width: 100%;
+			height: 100%;
+			// <animation ptoho>
+			transform: rotateZ(-2deg);
+			animation: rotation 8s infinite;
+
+			@keyframes rotation {
+				50% {
+					transform: rotateZ(1deg);
+				}
+			}
+
+			// <animation ptoho/>
+
+			// <Content>
+			&__content {
+				height: 100%;
+				width: 100%;
+				transition: 2s;
+				transform-style: preserve-3d;
+
+				.card-header-a__photo__content__front,
+				.card-header-a__photo__content__back {
+					max-width: 40.7rem;
+					max-height: 43.9rem;
+					position: absolute;
+					border-radius: 2.5rem;
+					filter: drop-shadow(2px 4px 6px black);
+
+					backface-visibility: hidden;
+				}
+
+				&__back ul {
+					list-style: none;
+				}
+
+				&__back {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					font-size: $font-paragraphs;
+					transform: rotateY(180deg);
+
+					&__title {
+						background: $background-cards-viollete;
+						box-shadow: $box-shadow-card-viollete;
+						color: $text-color-titles-inner-cards;
+						border-radius: 0.8rem;
+						padding: 1rem;
+						font-size: $font-titles;
+						text-align: center;
+					}
+
+					&__ul-icons i {
+						height: 4.7rem;
+						font-size: 5rem;
+						border-radius: 0.6rem;
+						transition: 0.4s;
+					}
+
+					&__ul-icons a {
+						text-decoration: none;
+					}
+
+					&__ul-icons {
+						list-style: none;
+
+						&__linkedin:hover {
+							color: $linkedin-color;
+							font-size: 5rem;
+							box-shadow: rgba(10, 102, 194, 0.16) 0px 10px 36px 0px,
+								rgba(10, 102, 194, 0.061) 0px 0px 0px 1px;
+						}
+
+						&__github:hover {
+							color: $github-color;
+							font-size: 5rem;
+							box-shadow: rgba(255, 255, 255, 0.16) 0px 10px 36px 0px,
+								rgba(255, 255, 255, 0.061) 0px 0px 0px 1px;
+						}
+
+						&__whatsapp:hover {
+							color: $whatsapp-color;
+							font-size: 5rem;
+							box-shadow: rgba(37, 211, 102, 0.16) 0px 10px 36px 0px,
+								rgba(37, 211, 102, 0.061) 0px 0px 0px 1px;
+						}
+					}
+				}
+
+				&__photo {
+					display: flex;
+					align-items: center;
+
+					&__img {
+						filter: drop-shadow(2px 4px 6px black);
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						border-radius: 2.5rem;
+					}
+				}
+			}
+
+			// </Content>
+		}
+	}
+}
+
+@media (max-width: 990px) {
+	.container-header {
+		margin-top: 0;
+		overflow: hidden; // avoid the scroll bar down
+		min-height: 120rem;
+	}
+
+	.row {
+		.card-header-a {
+			&__photo {
+				// <Content>
+				&__content {
+					&__back {
+						margin-top: 17rem;
+					}
+
+					&__photo {
+						&__img {
+							margin-top: 22rem;
+						}
+					}
+				}
+
+				// </Content>
+			}
+		}
+	}
+}

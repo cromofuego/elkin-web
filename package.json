@@ -1,0 +1,21 @@
+{
+  "name": "elkin-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "sass": "^1.55.0"
+  },
+  "homepage": "https://cromofuego.github.io/elkin-web/"
+}

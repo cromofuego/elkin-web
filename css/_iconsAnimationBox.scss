@@ -1,0 +1,128 @@
+.container-icons-box {
+	position: relative;
+	margin: 2rem 0;
+	display: grid;
+	justify-items: center;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
+	grid-gap: 40px;
+	padding: 30px;
+}
+
+.cube_face > i {
+	font-size: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+}
+
+.scene > i {
+	font-size: 54px;
+	position: absolute;
+	bottom: 0;
+	top: 30%;
+	left: 60%;
+	transform: translate(-50%, 0);
+	color: white;
+	transform: bottom 0.3s;
+}
+
+.scene:hover > i {
+	transform: translate(-50%, 0) rotateY(360deg);
+	bottom: -10px;
+	transition: 0.3s 0.2s;
+}
+
+.cube {
+	transform: translateY(0) translateZ(-100px) rotateX(-20deg) rotateY(20deg);
+}
+
+.scene {
+	width: 78px;
+	height: 78px;
+	perspective: 500px;
+}
+
+.cube {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.3s ease-in;
+}
+
+.cube_shadow {
+	display: block;
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	filter: blur(15px);
+	bottom: -12px;
+	left: 0;
+	background: black;
+	transition: 0.3s ease-in;
+}
+
+.scene:hover .cube_shadow {
+	width: 60px;
+	height: 10px;
+	filter: blur(15px);
+	bottom: 0;
+	left: 40px;
+}
+
+.cube_face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: $background-cards-viollete;
+	opacity: 1;
+	border: 3px solid black;
+}
+
+.cube_face > p {
+	border-bottom: solid white;
+	color: white;
+}
+
+.cube_face--front {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: rotateY(0) translateZ(38px);
+}
+
+.cube_face--right {
+	transform: rotateY(90deg) translateZ(38px);
+}
+
+.cube_face--back {
+	transform: rotateY(180deg) translateZ(38px);
+}
+
+.cube_face--left {
+	transform: rotateY(-90deg) translateZ(38px);
+}
+
+.cube_face--top {
+	transform: rotateX(90deg) translateZ(38px);
+}
+
+.scene:hover .cube {
+	transform: translateY(-96px) translateZ(-100px) rotateX(18deg) rotateY(30deg)
+		translateX(30px);
+}
+
+@media (max-width: 480px) {
+	.container-icons-box {
+		padding: 0;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+	}
+
+	.container-icons-box .scene-9 {
+		display: none;
+	}
+}
