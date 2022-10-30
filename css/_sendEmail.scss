@@ -5,14 +5,13 @@
 .row {
 	.send-email {
 		&__title1 {
+			z-index: 20;
 			font-size: $font-titles;
 			color: $text-color;
-
-			&__img {
-				object-fit: cover;
-			}
 		}
-
+		&__title1 > img {
+			width: 38rem;
+		}
 		// <btn form>
 
 		&__form {
@@ -168,6 +167,15 @@
 
 	.row {
 		.send-email {
+			&__title1 {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			&__title1 > img {
+				margin-top: 1rem;
+				width: 30rem;
+			}
 			&__form {
 				&__buttons {
 					display: inline-block;
