@@ -53,6 +53,9 @@
 				background: transparent;
 				text-decoration: none;
 			}
+			&__link-icon > p {
+				font-size: $font-paragraphs-small;
+			}
 
 			&__link-icon > i {
 				transition: 0.3s;
@@ -65,6 +68,10 @@
 			}
 
 			.navbar-a__ul__li-a__link-icon__link-icon--active i {
+				background: transparent;
+				color: white;
+			}
+			.navbar-a__ul__li-a__link-icon__link-icon--active p {
 				background: transparent;
 				color: white;
 			}

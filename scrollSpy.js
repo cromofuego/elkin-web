@@ -42,8 +42,7 @@ headers.forEach((header) => {
 });
 
 btnShowNavbar[0].addEventListener("click", function () {
-	console.log(iconIbtnShowNavbar[0].style.color);
-
+	// console.log(iconIbtnShowNavbar[0].style.color);
 	if (iconIbtnShowNavbar[0].style.color === "rgba(255, 255, 255, 0.8)") {
 		navbar.style = "transform: translate(-100px);";
 		// console.log('blacnk')
@@ -61,7 +60,7 @@ if (window.innerWidth > 900) {
 		const Viewport = window.visualViewport.pageTop;
 
 		if (Viewport > 3000) {
-			console.log("holi");
+			// console.log("holi");
 			arrowUp[0].style = "transform: translate(0px)";
 		} else {
 			arrowUp[0].style = "transform: translate(100px);";
@@ -90,3 +89,17 @@ if (window.innerWidth < 900) {
 		}
 	});
 }
+
+const checkLanguage = document.getElementsByClassName(
+	"switch-language__check-box-language"
+);
+
+checkLanguage[0].addEventListener("click", function () {
+	// console.log(checkLanguage[0].checked)
+	let id = checkLanguage[0].checked;
+	if (id === true) {
+		location.href = "es/index.html";
+	} else {
+		location.href = "../index.html";
+	}
+});
