@@ -72,6 +72,8 @@ body {
 		right: 3rem;
 		bottom: 3rem;
 		padding: 1.5rem;
+		outline: none;
+		border: none;
 		background-color: $background-general-card;
 		text-decoration: none;
 		display: flex;
@@ -113,6 +115,7 @@ html {
 
 // < change lenguage>
 .switch-language {
+	text-decoration: none;
 	z-index: 25;
 	right: 2rem;
 	top: -4rem;

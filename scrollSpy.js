@@ -55,6 +55,13 @@ btnShowNavbar[0].addEventListener("click", function () {
 });
 
 // Showing the navbar in width scree > 900
+
+arrowUp[0].addEventListener('click', function(){
+	// console.log('holi')
+	window.scrollTo({
+		top: 0,
+	});
+})
 if (window.innerWidth > 900) {
 	window.addEventListener("scroll", function () {
 		const Viewport = window.visualViewport.pageTop;
@@ -98,7 +105,7 @@ checkLanguage[0].addEventListener("click", function () {
 	// console.log(checkLanguage[0].checked)
 	let id = checkLanguage[0].checked;
 	if (id === true) {
-		location.href = "es/index.html";
+		location.href = "es/spanish.html";
 	} else {
 		location.href = "../index.html";
 	}
