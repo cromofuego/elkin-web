@@ -97,16 +97,49 @@ if (window.innerWidth < 900) {
 	});
 }
 
-const checkLanguage = document.getElementsByClassName(
-	"switch-language__check-box-language"
-);
+const checkLanguage = document.getElementsByClassName('switch-language__check-box-language');
+const checkLanguageEnglish = document.querySelectorAll('.target-english');
+const checkLanguageSpanish = document.querySelectorAll('.tager-spanish');
 
+const arrayEnglish = [...checkLanguageEnglish];
+const arraySpanish = [...checkLanguageSpanish];
+
+// console.log(checkLanguageEnglish)
+
+// arrayEnglish.forEach(node => {
+// 	console.log(node.style.display.nodeValue)
+// })
+// console.log(arrayEnglish[0].style.display.display)
+// console.log(arraySpanish[0].style.display.display)
+// let id = checkLanguage[0].checked;
+// console.log(id)
+// const display = window.getComputedStyle(checkLanguageEnglish).display;
+// console.log(display)
 checkLanguage[0].addEventListener("click", function () {
-	// console.log(checkLanguage[0].checked)
+	// console.log(checkLanguage[0])
+	// console.log(arrayEnglish)
 	let id = checkLanguage[0].checked;
-	if (id === true) {
-		location.href = "es/spanish.html";
-	} else {
-		location.href = "../index.html";
-	}
+	console.log(id)
+	arrayEnglish.forEach(node => {
+		// console.log(node.style.display)
+		if (id === true) {
+			console.log('holi englis1')
+			node.style = 'display: none !important;';
+		} else {
+			console.log('holi englis2')
+			node.style = 'display: inherit !important ;';
+		}
+		
+	})
+
+	arraySpanish.forEach(node => {
+		if (id === false) {
+			console.log('holispanis222')
+			node.style = 'display: none !important;';
+		} else {
+			console.log('holispanis')
+			node.style = 'display: inherit !important ;';
+		}
+	})
+
 });

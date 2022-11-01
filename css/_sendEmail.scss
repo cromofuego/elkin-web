@@ -10,7 +10,10 @@
 			color: $text-color;
 		}
 		&__title1 > img {
-			width: 38rem;
+			padding-top: 0rem;
+			object-fit: contain;
+			margin-left: 0rem;
+			width: 39rem;
 		}
 		// <btn form>
 
@@ -27,6 +30,7 @@
 				}
 
 				&__btn {
+					min-width: 21.5rem;
 					position: relative;
 					overflow: hidden;
 					display: inline-block;

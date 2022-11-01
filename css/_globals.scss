@@ -124,11 +124,15 @@ html {
 	display: flex;
 	justify-content: center;
 	&__span-en {
+		display: flex;
+		align-items: center;
 		color: $text-color-paragraph-inner-cards;
 		font-size: $font-paragraphs;
 		// height: 100%;
 	}
 	&__span-es {
+		display: flex;
+		align-items: center;
 		color: $text-color-paragraph-inner-cards;
 		font-size: $font-paragraphs;
 		// height: 100%;
@@ -171,4 +175,10 @@ html {
 		top: 2rem;
 	}
 }
+.tager-spanish {
+	display: none !important;
+}
+// .target-english {
+// 	display: none !important;
+// }
 // < change lenguage>

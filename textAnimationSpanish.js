@@ -1,4 +1,4 @@
-const canvas = document.getElementById("canvas-text-particles");
+const canvas = document.getElementById("canvas-text-particles-spanish");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth - 10; // usar todo width y heigth del browser
 // canvas.width = window.innerWidth - 100; // usar todo width y heigth del browser
@@ -35,7 +35,7 @@ if (window.innerWidth < 331) {
 	ctx.fillText(lines[1], 8, 44);
 	ctx.fillText(lines[2], 0, 64);
 } else if (window.innerWidth < 500) {
-	abjustX = 18.5;
+	abjustX = 8.5;
 	abjustY = 2.5;
 	ctx.fillStyle = "white";
 	ctx.font = "14px Consolas";
