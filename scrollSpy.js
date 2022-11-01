@@ -119,14 +119,14 @@ checkLanguage[0].addEventListener("click", function () {
 	// console.log(checkLanguage[0])
 	// console.log(arrayEnglish)
 	let id = checkLanguage[0].checked;
-	console.log(id)
+	// console.log(id)
 	arrayEnglish.forEach(node => {
 		// console.log(node.style.display)
 		if (id === true) {
-			console.log('holi englis1')
+			// console.log('holi englis1')
 			node.style = 'display: none !important;';
 		} else {
-			console.log('holi englis2')
+			// console.log('holi englis2')
 			node.style = 'display: inherit !important ;';
 		}
 		
@@ -134,10 +134,10 @@ checkLanguage[0].addEventListener("click", function () {
 
 	arraySpanish.forEach(node => {
 		if (id === false) {
-			console.log('holispanis222')
+			// console.log('holispanis222')
 			node.style = 'display: none !important;';
 		} else {
-			console.log('holispanis')
+			// console.log('holispanis')
 			node.style = 'display: inherit !important ;';
 		}
 	})
