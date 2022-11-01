@@ -34,7 +34,8 @@ if (window.innerWidth < 331) {
 	ctx.fillText(lines[1], 8, 44);
 	ctx.fillText(lines[2], 3.5, 64);
 } else if (window.innerWidth < 500) {
-	abjustX = 5.5;
+	abjustX = 6.5;
+	abjustY = 10;
 	ctx.fillStyle = "white";
 	ctx.font = "14px Consolas";
 	ctx.fillText(lines[0], 0, 26);
